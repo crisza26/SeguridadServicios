@@ -1,0 +1,30 @@
+<resources>
+    <!-- Login -->
+    <string name="app_name">SeguridadServicios</string>
+    <string name="LBL_LOGIN">Usuario</string>
+    <string name="LBL_CONTRASENA">Contraseña</string>
+    <string name="LBL_BTN_INGRESA">Ingresar</string>
+
+
+    <!-- Home -->
+    <string name="LBL_AB_AYUDA">Ayuda</string>
+    <string name="LBL_AB_SALIR">Salir</string>
+    <string name="LBL_BT_PUERTAS">Puertas</string>
+    <string name="LBL_BT_PERMISOS">Permisos</string>
+    <string name="LBL_BT_BPANICO">Botón de Pánico</string>
+
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Puertas -->
+    <string name="LBL_AB_PUERTAS">Puertas</string>
+    <string name="LBL_AB_PERMISOS">Permisos</string>
+    <string name="LBL_BT_PPPAL">Puerta Principal</string>
+    <string name="LBL_BT_PHAB">Puerta Habitación1</string>
+    <string name="LBL_BT_PHABD">Puerta Habitación2</string>
+
+    <string name="title_activity_puertas">Puertas</string>
+
+</resources>

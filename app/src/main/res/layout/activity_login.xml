@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/witheLetter">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo3"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/seguridadyservicios"
+        android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/id_usuario"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:hint="@string/LBL_LOGIN"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="20sp"
+                android:gravity="center"
+                android:background="@drawable/text_field_1x" />
+
+            <EditText
+                android:id="@+id/id_contrasena"
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:hint="@string/LBL_CONTRASENA"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_marginLeft="5sp"
+                android:layout_marginRight="5sp"
+                android:layout_marginTop="15sp"
+                android:gravity="center"
+                android:background="@drawable/text_field_1x" />
+
+            <Button
+                android:id="@+id/id_btn_ingresar"
+                android:background="@layout/buttonshape"
+                android:shadowRadius="5"
+                android:layout_width="193dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/LBL_BTN_INGRESA"
+                android:layout_height="36dp"
+                android:layout_marginLeft="90sp"
+                android:layout_marginRight="90sp"
+                android:onClick="ingresar"
+                android:gravity="center"
+                android:textColor="@color/witheLetter" />
+
+            <TextView
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+    <include
+        layout="@layout/menu_inferior"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:id="@+id/include2"></include>
+</LinearLayout>
+
+
+

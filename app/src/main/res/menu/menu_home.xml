@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.seguridadservicios.controlacceso.seguridadservicios.ui.HomeActivity">
+    <item
+        android:id="@+id/id_ayuda"
+        android:title="@string/LBL_AB_AYUDA"
+        android:orderInCategory="1"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/id_salir"
+        android:title="@string/LBL_AB_SALIR"
+        android:orderInCategory="2"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blueBottom">#00bbde</color>
+    <color name="witheLetter">#FFFFFF</color>
+    <color name="listview_select_background">#0C1114</color>
+    <color name="black_person">#0C1114</color>
+</resources>
