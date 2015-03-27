@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/witheLetter"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:gravity="right">
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/iconoplus"
+        android:onClick="switchStatus"
+        android:id="@+id/id_add_user"
+        android:layout_marginLeft="80dp" />
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:text="@string/LBL_DOOR_STATUS"
+            android:textSize="12sp"
+            android:gravity="center_vertical" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:src="@drawable/off"
+            android:onClick="switchStatus"
+            android:id="@+id/id_switch_status"
+            android:layout_marginLeft="7dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="50dp"
+        android:layout_weight="0.63">
+
+       <Button
+            android:id="@+id/id_getusers"
+            android:background="@layout/buttonshape"
+            android:shadowRadius="5"
+            android:layout_width="193dp"
+            android:text="@string/LBL_BT_USERSACCESS"
+            android:layout_height="36dp"
+            android:onClick="getUsersAcces"
+            android:layout_marginLeft="90sp"
+            android:layout_marginRight="90sp"
+            android:textColor="@color/witheLetter"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/id_history"
+            android:background="@layout/buttonshape"
+            android:shadowRadius="5"
+            android:layout_width="193dp"
+            android:text="@string/LBL_BT_USERSACCESS"
+            android:layout_height="36dp"
+            android:onClick="historyAccess"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="90sp"
+            android:layout_marginRight="90sp"
+            android:textColor="@color/witheLetter"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+    <include layout="@layout/menu_inferior"></include>
+</LinearLayout>
+
