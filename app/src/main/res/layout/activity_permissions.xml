@@ -15,26 +15,12 @@
 
 
         <Button
-            android:id="@+id/id_puertas"
+            android:id="@+id/id_registrado"
             android:background="@layout/buttonshape"
             android:shadowRadius="5"
             android:layout_width="193dp"
-            android:text="@string/LBL_BT_PUERTAS"
-            android:layout_height="36dp"
-            android:layout_marginLeft="90sp"
-            android:layout_marginRight="90sp"
-            android:onClick="puertas"
-            android:layout_marginTop="5sp"
-            android:textColor="@color/witheLetter"
-            android:gravity="center" />
-
-        <Button
-            android:id="@+id/id_permisos"
-            android:background="@layout/buttonshape"
-            android:shadowRadius="5"
-            android:layout_width="193dp"
-            android:text="@string/LBL_BT_PERMISOS"
-            android:onClick="permisos"
+            android:text="Usuario Registrado"
+            android:onClick="registrado"
             android:layout_height="36dp"
             android:layout_marginLeft="90sp"
             android:layout_marginRight="90sp"
@@ -43,17 +29,17 @@
             android:gravity="center" />
 
         <Button
-            android:id="@+id/id_bpanico"
+            android:id="@+id/id_invitado"
             android:background="@layout/buttonshape"
             android:shadowRadius="5"
-            android:onClick="panico"
+            android:onClick="invitado"
             android:layout_width="193dp"
-            android:text="@string/LBL_BT_BPANICO"
+            android:text="Usuario Invitado"
             android:layout_height="36dp"
             android:layout_marginLeft="90sp"
             android:layout_marginRight="90sp"
             android:layout_marginTop="50dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="100dp"
             android:textColor="@color/witheLetter"
             android:gravity="center" />
 

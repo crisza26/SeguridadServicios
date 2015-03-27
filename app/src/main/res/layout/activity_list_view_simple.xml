@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="listviewselect.cfag.com.listviewselectcomponent.ListViewSelect"
+    android:background="@color/listview_select_background"
+    android:alpha="0.9"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="default"
+        android:id="@+id/lblTitle"
+        android:textColor="@android:color/white"
+        android:gravity="center_horizontal"/>
+
+    <ListView
+        android:id="@+id/id_list_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblTitle"
+        android:layout_marginTop="20sp"
+        android:layout_above="@+id/btnBack"></ListView>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:text="Atras"
+        android:id="@+id/btnBack"
+        android:background="@color/listview_select_background"
+        android:textColor="@color/witheLetter"
+        android:shadowRadius="5"
+        android:layout_width="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:alpha="0.25"/>
+</RelativeLayout>

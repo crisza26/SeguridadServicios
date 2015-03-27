@@ -12,6 +12,8 @@
     <string name="LBL_BT_PUERTAS">Puertas</string>
     <string name="LBL_BT_PERMISOS">Permisos</string>
     <string name="LBL_BT_BPANICO">Botón de Pánico</string>
+    <string name="TITULO_HOME">SEGURIDAD Y SERVICIOS</string>
+
 
     <string name="title_activity_home">HomeActivity</string>
 
@@ -24,7 +26,13 @@
     <string name="LBL_BT_PPPAL">Puerta Principal</string>
     <string name="LBL_BT_PHAB">Puerta Habitación1</string>
     <string name="LBL_BT_PHABD">Puerta Habitación2</string>
+    <string name="LBL_DOOR_STATUS">ESTADO PUERTA</string>
+    <string name="LBL_BT_USERSACCESS">Usuarios con Acceso</string>
 
     <string name="title_activity_puertas">Puertas</string>
+    <string name="title_activity_front_door">FrontDoorActivity</string>
+    <string name="title_activity_history_door_access">HistoryDoorAccessActivity</string>
+    <string name="title_activity_request_registration">RequestRegistrationActivity</string>
+    <string name="title_activity_permissions">PermissionsActivity</string>
 
 </resources>

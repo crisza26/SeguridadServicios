@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.seguridadservicios.controlacceso.seguridadservicios.ui.HomeActivity">
+    tools:context="com.seguridadservicios.controlacceso.seguridadservicios.ui.gui.HomeActivity">
     <item
         android:id="@+id/id_ayuda"
         android:title="@string/LBL_AB_AYUDA"
