@@ -58,10 +58,10 @@ public class FrontDoorActivity extends ActionBarActivity {
 
     @OnClick(R.id.id_history)
     public void historyAccess(View view){
-        view.startAnimation(scalar);
+       /** view.startAnimation(scalar);
         Intent intHistory = new Intent(FrontDoorActivity.this, HistoryDoorAccessActivity.class);
         startActivity(intHistory);
-    }
+**/    }
 
     @OnClick(R.id.id_getusers)
     public void getUsersAcces(View view) {

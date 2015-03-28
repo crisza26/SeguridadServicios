@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.seguridadservicios.controlacceso.seguridadservicios" >
 
+    <uses-sdk android:minSdkVersion="16" />
+
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
     <!--
@@ -15,6 +17,14 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
 
+    <android:uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,11 +36,6 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
@@ -60,9 +65,6 @@
             android:windowSoftInputMode="stateHidden" >
         </activity>
         <activity
-            android:name=".ui.gui.HistoryDoorAccessActivity"
-            android:label="@string/title_activity_history_door_access" />
-        <activity
             android:name=".ui.gui.RequestRegistrationActivity"
             android:configChanges="orientation"
             android:label="@string/title_activity_request_registration"
@@ -72,6 +74,32 @@
         <activity
             android:name=".ui.gui.PermissionsActivity"
             android:label="@string/title_activity_permissions" >
+        </activity>
+        <activity
+            android:name=".ui.gui.RegistredUser"
+            android:label="@string/title_activity_registred_user" >
+        </activity>
+        <activity
+            android:name=".ui.gui.HistoryDoorAccessActivity"
+            android:label="@string/title_activity_history_door_access" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.gui.RegisteredActivity"
+            android:label="@string/title_activity_registered" >
+
+        </activity>
+        <activity
+            android:name=".PersonalData"
+            android:label="@string/title_activity_personal_data" >
+        </activity>
+        <activity
+            android:name=".Guest"
+            android:label="@string/title_activity_guest" >
         </activity>
     </application>
 
