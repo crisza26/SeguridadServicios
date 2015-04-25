@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.seguridadservicios.controlacceso.seguridadservicios" >
 
-    <uses-sdk android:minSdkVersion="16" />
+    <uses-sdk android:minSdkVersion="17" />
 
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -36,6 +36,11 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data
@@ -82,16 +87,11 @@
         <activity
             android:name=".ui.gui.HistoryDoorAccessActivity"
             android:label="@string/title_activity_history_door_access" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".ui.gui.RegisteredActivity"
             android:label="@string/title_activity_registered" >
-
         </activity>
         <activity
             android:name=".PersonalData"
@@ -100,6 +100,18 @@
         <activity
             android:name=".Guest"
             android:label="@string/title_activity_guest" >
+        </activity>
+        <activity
+            android:name=".ui.gui.PesonalDataActivity"
+            android:label="@string/title_activity_pesonal_data" >
+        </activity>
+        <activity
+            android:name=".keyGenerate"
+            android:label="@string/title_activity_key_generate" >
+        </activity>
+        <activity
+            android:name=".ui.gui.ServiceTest"
+            android:label="@string/title_activity_service_test" >
         </activity>
     </application>
 

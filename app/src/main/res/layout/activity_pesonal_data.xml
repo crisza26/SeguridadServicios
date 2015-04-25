@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/witheLetter"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/first_name"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:hint="Name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:fontFamily="opensans"
+            android:layout_marginLeft="70sp"
+            android:layout_marginRight="70sp"
+            android:gravity="center"
+            android:singleLine="true"
+
+            android:background="@drawable/text_field_1x" />
+
+        <EditText
+            android:id="@+id/last_name"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:hint="Last name"
+            android:inputType="text"
+            android:maxLines="1"
+            android:fontFamily="opensans"
+            android:layout_marginLeft="70sp"
+            android:layout_marginRight="70sp"
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@drawable/text_field_1x" />
+
+        <EditText
+            android:id="@+id/id_personal"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:hint="ID"
+            android:inputType="textEmailAddress"
+            android:fontFamily="opensans"
+            android:maxLines="1"
+            android:layout_marginLeft="70sp"
+            android:layout_marginRight="70sp"
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@drawable/text_field_1x" />
+
+        <EditText
+            android:id="@+id/id_relation"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:hint="Relationship"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:layout_marginLeft="70sp"
+            android:layout_marginRight="70sp"
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:background="@drawable/text_field_1x" />
+
+        <Button
+            android:id="@+id/id_savepersonal"
+            android:background="@layout/buttonshape"
+            android:shadowRadius="5"
+            android:layout_width="193dp"
+            android:text="Send"
+            android:onClick="guardarInformacion"
+            android:layout_height="36dp"
+            android:layout_marginLeft="90sp"
+            android:layout_marginRight="90sp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/witheLetter"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/menu_inferior"></include>
+</LinearLayout>
+

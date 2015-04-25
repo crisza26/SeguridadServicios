@@ -12,8 +12,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.seguridadservicios.controlacceso.seguridadservicios.R;
+import com.seguridadservicios.controlacceso.seguridadservicios.service.CatchKeyService;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -58,12 +60,26 @@ public class HomeActivity extends Activity {
     @OnClick(R.id.id_permisos)
     public void permisos(View view) {
         view.startAnimation(scalar);
+        Intent inetPermisos = new Intent(HomeActivity.this, PermissionsActivity.class);
+        startActivity(inetPermisos);
     }
 
     @OnClick(R.id.id_bpanico)
     public void panico(View view) {
         view.startAnimation(scalar);
     }
+
+    @OnClick(R.id.id_bgenerarclave)
+    public void generarclave(View view) {
+        view.startAnimation(scalar);
+        CatchKeyService cks = new CatchKeyService();
+        cks.accessWebService();
+
+
+        Toast.makeText(getApplicationContext(),
+               SinPublicidad(cks.getJsonResult()), Toast.LENGTH_SHORT).show();
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -84,5 +100,16 @@ public class HomeActivity extends Activity {
 
 
         return super.onOptionsItemSelected(item);
+    }
+    public String SinPublicidad(String str){
+        String temp="";
+        for(int i =0;i< str.length();i++){
+            if(str.charAt(i)!='<') {
+                temp = temp + str.charAt(i);
+            }else{
+                break;
+            }
+        }
+        return temp;
     }
 }

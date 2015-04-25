@@ -1,6 +1,7 @@
 package com.seguridadservicios.controlacceso.seguridadservicios.ui.gui;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -34,11 +35,15 @@ public class PermissionsActivity extends Activity {
     @OnClick(R.id.id_registrado)
     public void registrado(View view) {
         view.startAnimation(scalar);
+        Intent inetRegi = new Intent(PermissionsActivity.this, RegisteredActivity.class);
+        startActivity(inetRegi);
     }
 
     @OnClick(R.id.id_invitado)
     public void invitado(View view) {
         view.startAnimation(scalar);
+       // Intent inetRegi = new Intent(PermissionsActivity.this, RegisteredActivity.class);
+       // startActivity(inetRegi);
     }
 
     @Override

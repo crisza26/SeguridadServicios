@@ -14,9 +14,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.seguridadservicios.controlacceso.seguridadservicios.R;
+import com.seguridadservicios.controlacceso.seguridadservicios.service.LoginService;
 
 
 import butterknife.ButterKnife;
@@ -35,9 +37,9 @@ import butterknife.OnClick;
 public class LoginActivity extends Activity {
 
 
-    @InjectView(R.id.id_usuario)
+    @InjectView(R.id.EditTextLoginUsername)
     EditText ivEtUsuario;
-    @InjectView(R.id.id_contrasena)
+    @InjectView(R.id.EditTextLoginPassword)
     EditText ivEtContrasena;
     @InjectView(R.id.id_btn_ingresar)
     Button ivBtIngresar;
@@ -61,12 +63,30 @@ public class LoginActivity extends Activity {
         startActivity(intSolRegistro);
     }
 
-    @OnClick(R.id.id_btn_ingresar)
+    //@OnClick(R.id.id_btn_ingresar)
     public void ingresar(View view) {
         view.startAnimation(scalar);
-        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-        startActivity(intent);
+        EditText username=(EditText) findViewById(R.id.EditTextLoginUsername);
+        EditText password=(EditText) findViewById(R.id.EditTextLoginPassword);
+        LoginService ls=new LoginService();
+        ls.setUser(username.getText().toString());
+        ls.setPasword(password.getText().toString());
+        ls.accessWebService();
 
+        Toast.makeText(getApplicationContext(),
+               ls.getJsonResult(), Toast.LENGTH_SHORT);
+
+        if(ls.getJsonResult().equals("1")){
+
+            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+            startActivity(intent);
+
+        }else{
+
+            Toast.makeText(getApplicationContext(),
+                    "error en usuario o contraseña!", Toast.LENGTH_SHORT).show();
+
+        }
     }
 
 

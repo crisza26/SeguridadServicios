@@ -12,6 +12,7 @@
     <string name="LBL_BT_PUERTAS">Puertas</string>
     <string name="LBL_BT_PERMISOS">Permisos</string>
     <string name="LBL_BT_BPANICO">Botón de Pánico</string>
+    <string name="LBL_BT_GENCLA">Generar Clave</string>
     <string name="TITULO_HOME">SEGURIDAD Y SERVICIOS</string>
 
 
@@ -89,5 +90,8 @@
     <string name="title_activity_registered">RegisteredActivity</string>
     <string name="title_activity_personal_data">PersonalData</string>
     <string name="title_activity_guest">Guest</string>
+    <string name="title_activity_pesonal_data">PesonalDataActivity</string>
+    <string name="title_activity_key_generate">keyGenerate</string>
+    <string name="title_activity_service_test">ServiceTest</string>
 
 </resources>

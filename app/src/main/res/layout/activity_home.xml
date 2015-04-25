@@ -59,6 +59,21 @@
             android:textColor="@color/witheLetter"
             android:gravity="center" />
 
+        <Button
+            android:id="@+id/id_bgenerarclave"
+            android:background="@layout/buttonshape"
+            android:shadowRadius="5"
+            android:onClick="generarclave"
+            android:layout_width="193dp"
+            android:text="@string/LBL_BT_GENCLA"
+            android:layout_height="36dp"
+            android:layout_marginLeft="90sp"
+            android:layout_marginRight="90sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="60dp"
+            android:textColor="@color/witheLetter"
+            android:gravity="center" />
+
     </LinearLayout>
 
     <include layout="@layout/menu_inferior"></include>

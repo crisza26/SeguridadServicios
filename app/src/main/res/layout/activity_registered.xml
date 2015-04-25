@@ -1,6 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -13,8 +15,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/scrollView_activityRegistered"
 
-        android:layout_centerInParent="true"
-        >
+        android:layout_centerInParent="true">
 
         <TableLayout
             android:layout_margin="1dp"
@@ -37,7 +38,7 @@
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:paddingLeft="1dp"
                     android:text="DOORS"
-                    android:id="@+id/textView5" />
+                    android:id="@+id/id_tv_doors" />
 
 
             </TableRow>
@@ -45,7 +46,7 @@
             <TableRow
                 android:layout_width="fill_parent"
                 android:background="@android:color/white"
-android:layout_margin="1dp"
+                android:layout_margin="1dp"
                 android:layout_height="fill_parent">
 
                 <TextView
@@ -55,13 +56,13 @@ android:layout_margin="1dp"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:paddingLeft="1dp"
                     android:text="Front Door"
-                    android:id="@+id/textView5" />
+                    android:id="@+id/id_tv_front" />
 
                 <CheckBox
                     android:layout_margin="1dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox"
+                    android:id="@+id/id_check_front"
                     android:checked="false" />
 
             </TableRow>
@@ -79,7 +80,7 @@ android:layout_margin="1dp"
                     android:textAppearance="?android:attr/textAppearanceMedium"
                     android:paddingLeft="1dp"
                     android:text="Room 1"
-                    android:id="@+id/textView5" />
+                    android:id="@+id/id_tv_room1" />
 
                 <CheckBox
                     android:layout_margin="1dp"
@@ -89,6 +90,7 @@ android:layout_margin="1dp"
                     android:checked="false" />
 
             </TableRow>
+
             <TableRow
                 android:layout_width="fill_parent"
                 android:background="@android:color/white"
@@ -108,7 +110,7 @@ android:layout_margin="1dp"
                     android:layout_margin="1dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/checkBox"
+                    android:id="@+id/checkBox2"
                     android:checked="false" />
 
             </TableRow>
@@ -135,13 +137,20 @@ android:layout_margin="1dp"
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="SEND"
-        android:id="@+id/button2"
-        android:layout_below="@+id/scrollView_activityRegistered"
-        android:layout_toRightOf="@+id/editText"
-        android:layout_toEndOf="@+id/editText"
-        android:layout_marginTop="61dp" />
+        android:id="@+id/id_button_send"
+        android:layout_height="36dp"
+        android:layout_marginBottom="33dp"
+        android:textColor="@color/witheLetter"
+        android:gravity="center"
+        android:background="@layout/buttonshape"
+        android:shadowRadius="5"
+        android:layout_above="@+id/include2"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_alignRight="@+id/scrollView_activityRegistered"
+        android:layout_alignEnd="@+id/scrollView_activityRegistered" />
+
     <include
         layout="@layout/menu_inferior"
         android:layout_width="match_parent"
