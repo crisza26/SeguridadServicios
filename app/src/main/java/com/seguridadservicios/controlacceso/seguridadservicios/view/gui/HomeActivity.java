@@ -1,4 +1,4 @@
-package com.seguridadservicios.controlacceso.seguridadservicios.ui.gui;
+package com.seguridadservicios.controlacceso.seguridadservicios.view.gui;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.seguridadservicios.controlacceso.seguridadservicios.R;
-import com.seguridadservicios.controlacceso.seguridadservicios.service.CatchKeyService;
+import com.seguridadservicios.controlacceso.seguridadservicios.api.CatchKeyService;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;

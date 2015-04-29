@@ -1,4 +1,4 @@
-package com.seguridadservicios.controlacceso.seguridadservicios.ui.listas;
+package com.seguridadservicios.controlacceso.seguridadservicios.view.listas;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,11 +10,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.seguridadservicios.controlacceso.seguridadservicios.R;
-import com.seguridadservicios.controlacceso.seguridadservicios.model.ListViewUserAccess;
 import com.seguridadservicios.controlacceso.seguridadservicios.model.UserAccessModel;
-import com.seguridadservicios.controlacceso.seguridadservicios.ui.adapter.UserAccessAdapter;
-
-import org.w3c.dom.UserDataHandler;
+import com.seguridadservicios.controlacceso.seguridadservicios.view.adapter.UserAccessAdapter;
 
 import java.util.List;
 

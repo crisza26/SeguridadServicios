@@ -1,8 +1,6 @@
-package com.seguridadservicios.controlacceso.seguridadservicios.service;
+package com.seguridadservicios.controlacceso.seguridadservicios.api;
 
 import android.os.AsyncTask;
-
-import com.seguridadservicios.controlacceso.seguridadservicios.object.Usuario;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -11,7 +9,6 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -55,14 +52,8 @@ public class CatchKeyService {
                 try {
 
                     List<NameValuePair> parametros = new ArrayList<NameValuePair>();
-
-
                    // parametros.add(new BasicNameValuePair("user", getUser()));
-
-
-
                     httppost.setEntity(new UrlEncodedFormEntity(parametros));
-
                     HttpResponse response = httpclient.execute(httppost);
                     jsonResult = inputStreamToString(response.getEntity().getContent()).toString();
                 } catch (ClientProtocolException e) {

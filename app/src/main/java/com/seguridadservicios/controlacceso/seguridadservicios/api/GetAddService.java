@@ -1,9 +1,9 @@
-package com.seguridadservicios.controlacceso.seguridadservicios.service;
+package com.seguridadservicios.controlacceso.seguridadservicios.api;
 
 import android.os.AsyncTask;
 
-import com.seguridadservicios.controlacceso.seguridadservicios.object.Casa;
-import com.seguridadservicios.controlacceso.seguridadservicios.object.Usuario;
+
+import com.seguridadservicios.controlacceso.seguridadservicios.model.Casa;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -24,16 +24,44 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Dianita on 24/04/2015.
+ * Created by fuinkio on 4/23/2015.
  */
-public class LoginService {
+public class GetAddService {
+    public int getNum1() {
+        return num1;
+    }
+
+    public void setNum1(int num1) {
+        this.num1 = num1;
+    }
+
+    public ArrayList<Casa> getCasas() {
+        return casas;
+    }
+
+    public void setCasas(ArrayList<Casa> casas) {
+        this.casas = casas;
+    }
+
+    public int getNum2() {
+        return num2;
+    }
+
+    public void setNum2(int num2) {
+        this.num2 = num2;
+    }
+
+    int num1;
+    int num2;
+
+    private ArrayList<Casa> casas;
 
     public String getJsonResult() {
         return jsonResult;
     }
 
     private String jsonResult;
-    private String url = "http://sys.bugs3.com/sys/controller/login.php";
+    private String url = "http://sys.bugs3.com/sys/controller/merompeslasbolas.php";
 
     public String getError() {
         return error;
@@ -44,34 +72,15 @@ public class LoginService {
     }
 
     private String error="bien";
-    private String user;
 
-    public String getUser() {
-        return user;
-    }
 
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    public String getPasword() {
-        return pasword;
-    }
-
-    public void setPasword(String pasword) {
-        this.pasword = pasword;
-    }
-
-    private String pasword;
-
-private ArrayList<Usuario> usuario;
 
 
     // Async Task to access the web
     private class JsonReadTask extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... params) {
-            usuario=new ArrayList<Usuario>();
+casas=new ArrayList<Casa>();
             HttpClient httpclient = new DefaultHttpClient();
             HttpPost httppost = new HttpPost(params[0]);
             try {
@@ -79,8 +88,8 @@ private ArrayList<Usuario> usuario;
                 List<NameValuePair> parametros = new ArrayList<NameValuePair>();
 
 
-                parametros.add(new BasicNameValuePair("user", getUser()));
-                parametros.add(new BasicNameValuePair("password", getPasword()));
+               parametros.add(new BasicNameValuePair("num1", Integer.toString(getNum1())));
+                parametros.add(new BasicNameValuePair("num2", Integer.toString(getNum2())));
 
 
 
@@ -129,7 +138,7 @@ private ArrayList<Usuario> usuario;
         // passes values for the urls string array
         try {
             task.execute(new String[]{url}).get();
-            ListDrawer();
+           ListDrawer();
 
         }catch(Exception e){
 
@@ -142,8 +151,22 @@ private ArrayList<Usuario> usuario;
 
         try {
             JSONArray jsonResponse = new JSONArray(jsonResult);
-            jsonResult=Integer.toString(jsonResponse.length());
 
+            for (int i = 0; i < jsonResponse.length(); i++) {
+                Casa temp=new Casa();
+
+                temp.setNombre(jsonResponse.getJSONObject(i).getString("tbl_casa_nombre"));
+
+                temp.setUsuario(jsonResponse.getJSONObject(i).getString("tbl_casa_id_usuario"));
+                temp.setId(jsonResponse.getJSONObject(i).getString("tbl_casa_id"));
+
+                temp.setPassword(jsonResponse.getJSONObject(i).getString("tbl_password"));
+
+
+casas.add(temp);
+
+
+            }
 
 
         } catch (JSONException e) {

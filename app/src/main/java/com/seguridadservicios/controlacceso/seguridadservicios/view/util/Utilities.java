@@ -1,4 +1,4 @@
-package com.seguridadservicios.controlacceso.seguridadservicios.util;
+package com.seguridadservicios.controlacceso.seguridadservicios.view.util;
 
 /**
  * Created by Dianita on 26/03/2015.

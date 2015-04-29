@@ -1,6 +1,5 @@
-package com.seguridadservicios.controlacceso.seguridadservicios.ui.gui;
+package com.seguridadservicios.controlacceso.seguridadservicios.view.gui;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,8 +13,8 @@ import android.widget.ImageView;
 import com.seguridadservicios.controlacceso.seguridadservicios.R;
 import com.seguridadservicios.controlacceso.seguridadservicios.model.DoorModel;
 import com.seguridadservicios.controlacceso.seguridadservicios.model.UserAccessModel;
-import com.seguridadservicios.controlacceso.seguridadservicios.ui.listas.ListViewSelectSimple;
-import com.seguridadservicios.controlacceso.seguridadservicios.util.Utilities;
+import com.seguridadservicios.controlacceso.seguridadservicios.view.listas.ListViewSelectSimple;
+import com.seguridadservicios.controlacceso.seguridadservicios.view.util.Utilities;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

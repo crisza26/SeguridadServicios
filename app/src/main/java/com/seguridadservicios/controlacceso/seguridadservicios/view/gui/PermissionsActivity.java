@@ -1,13 +1,14 @@
-package com.seguridadservicios.controlacceso.seguridadservicios.ui.gui;
+package com.seguridadservicios.controlacceso.seguridadservicios.view.gui;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.seguridadservicios.controlacceso.seguridadservicios.R;
 
@@ -15,34 +16,39 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 
-public class RequestRegistrationActivity extends Activity {
-    @InjectView(R.id.id_req_send)
-    Button ivBtSend;
-    @InjectView(R.id.id_req_cancel)
-    Button ivBtCancel;
+public class PermissionsActivity extends Activity {
+    Animation scalar;
+    @InjectView(R.id.id_registrado)
+    Button ivBtRegistrado;
+    @InjectView(R.id.id_invitado)
+    Button ivBtInvitado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_request_registration);
+        setContentView(R.layout.activity_permissions);
         ButterKnife.inject(this);
+        scalar = AnimationUtils.loadAnimation(this, R.anim.scale_buttom);
     }
 
-    @OnClick(R.id.id_req_send)
-    public void send(View view) {
-        Toast.makeText(getBaseContext(), "La petición se ha enviado satisfactoriamente", Toast.LENGTH_LONG).show();
+    @OnClick(R.id.id_registrado)
+    public void registrado(View view) {
+        view.startAnimation(scalar);
+        Intent inetRegi = new Intent(PermissionsActivity.this, RegisteredActivity.class);
+        startActivity(inetRegi);
     }
 
-    @OnClick(R.id.id_req_cancel)
-    public void cancel(View view) {
-        finish();
+    @OnClick(R.id.id_invitado)
+    public void invitado(View view) {
+        view.startAnimation(scalar);
+       // Intent inetRegi = new Intent(PermissionsActivity.this, RegisteredActivity.class);
+       // startActivity(inetRegi);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_request_registration, menu);
+        getMenuInflater().inflate(R.menu.menu_permissions, menu);
         return true;
     }
 

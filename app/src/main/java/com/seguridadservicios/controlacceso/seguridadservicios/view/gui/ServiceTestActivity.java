@@ -1,4 +1,4 @@
-package com.seguridadservicios.controlacceso.seguridadservicios.ui.gui;
+package com.seguridadservicios.controlacceso.seguridadservicios.view.gui;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -9,9 +9,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.seguridadservicios.controlacceso.seguridadservicios.R;
-import com.seguridadservicios.controlacceso.seguridadservicios.service.GetAddService;
+import com.seguridadservicios.controlacceso.seguridadservicios.api.GetAddService;
 
-public class ServiceTest extends ActionBarActivity {
+public class ServiceTestActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

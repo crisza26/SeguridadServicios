@@ -7,15 +7,20 @@
 
     <style name="CustomActionBarTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
         <item name="android:actionBarStyle">@style/MyActionBar</item>
+
     </style>
 
     <!-- ActionBar styles -->
-    <style name="MyActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+    <style name="MyActionBar" parent="@android:style/Widget.Holo.ActionBar">
 
         <item name="android:textColor">@color/witheLetter</item>
-        <item name="android:layout_marginLeft">100dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
         <item name="android:actionBarStyle">@style/CustomActionBarUpAsHome</item>
+        <item name="android:background">@color/blueBottom</item>
 
+    </style>
+    <style name="Theme.MyActionBar.Background" parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/blueBottom</item>
     </style>
 
     <style name="CustomActionBarUpAsHome" parent="android:Theme.Holo">

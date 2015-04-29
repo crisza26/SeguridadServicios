@@ -1,4 +1,4 @@
-package com.seguridadservicios.controlacceso.seguridadservicios.ui.gui;
+package com.seguridadservicios.controlacceso.seguridadservicios.view.gui;
 
 import android.graphics.Color;
 import android.graphics.Paint;

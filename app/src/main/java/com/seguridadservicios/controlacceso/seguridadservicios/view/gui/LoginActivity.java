@@ -1,4 +1,4 @@
-package com.seguridadservicios.controlacceso.seguridadservicios.ui.gui;
+package com.seguridadservicios.controlacceso.seguridadservicios.view.gui;
 
 
 import android.app.Activity;
@@ -13,12 +13,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 
 import com.seguridadservicios.controlacceso.seguridadservicios.R;
-import com.seguridadservicios.controlacceso.seguridadservicios.service.LoginService;
+import com.seguridadservicios.controlacceso.seguridadservicios.api.LoginService;
 
 
 import butterknife.ButterKnife;

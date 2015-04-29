@@ -9,11 +9,11 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="379dp"
         android:orientation="vertical"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="50dp"
         android:gravity="center"
-        android:layout_weight="0.90">
+        android:layout_weight="0.45">
 
 
         <Button
@@ -22,6 +22,7 @@
             android:shadowRadius="5"
             android:layout_width="193dp"
             android:text="@string/LBL_BT_PUERTAS"
+
             android:layout_height="36dp"
             android:layout_marginLeft="90sp"
             android:layout_marginRight="90sp"
@@ -70,12 +71,13 @@
             android:layout_marginLeft="90sp"
             android:layout_marginRight="90sp"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="60dp"
+            android:layout_marginBottom="80dp"
             android:textColor="@color/witheLetter"
             android:gravity="center" />
 
     </LinearLayout>
 
-    <include layout="@layout/menu_inferior"></include>
+    <include layout="@layout/menu_inferior"
+        android:layout_weight="0.35"></include>
 </LinearLayout>
 

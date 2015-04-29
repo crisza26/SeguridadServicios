@@ -1,4 +1,4 @@
-package com.seguridadservicios.controlacceso.seguridadservicios.object;
+package com.seguridadservicios.controlacceso.seguridadservicios.model;
 
 /**
  * Created by fuinkio on 4/24/2015.
