@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+<body>
+
+	<form name="login" method="post" accept-charset="utf-8">
+		<ul>
+			<li>
+				<label for="user">Nombre</label>
+				<input type="name" name="user" id="user" placeholder="yourname" required>
+			</li>
+			<li>
+				<label for="password">Password</label>
+				<input type="password" name="password" id="pass" placeholder="password" required></li>
+			</ul>
+
+		</form>
+		<div id="error"></div>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<input type="submit" value="Login" id="ingresar" onclick="getlogin();">
+
+<script>
+$(document).ready(function(){
+    $("#ingresar").click(function(){
+        $.post( "php/controller/controller.php", { servicio:"login",user: $("#user").val(), password: $("#pass").val()})
+		  .done(function( data) {
+		  	obj=jQuery.parseJSON(data);
+		  	if(obj.error){
+		  		$("#error").html(obj.error);
+		  	}
+		  	else{
+		  		//alert(obj.location)
+		  		window.location.assign(obj.location);
+		  	}
+		});
+    });
+});
+</script>
+
+</body>
+</html>

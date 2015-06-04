@@ -1,0 +1,327 @@
+.version.index /* version checker */
+{
+	color: #0000F1;
+	background-color: #90DB0C;
+}
+
+.html
+{
+	background-color: #FFFFFF;
+}
+
+#page
+{
+	z-index: 1;
+	width: 920px;
+	min-height: 430px;
+	background-image: none;
+	border-style: none;
+	border-color: #000000;
+	background-color: #FFFFFF;
+	border-radius: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 8px 20px 62px;
+}
+
+#pu631
+{
+	width: 0.01px;
+	margin-left: 5px;
+}
+
+#u631
+{
+	z-index: 33;
+	width: 69px;
+	margin-right: -10000px;
+}
+
+#menuu123
+{
+	z-index: 2;
+	width: 0px;
+	margin-right: -10000px;
+	margin-top: 12px;
+	left: 75px;
+}
+
+#u124
+{
+	width: 166px;
+	min-height: 42px;
+	margin-right: -10000px;
+}
+
+#u125
+{
+	width: 166px;
+	padding-bottom: 25px;
+}
+
+#u125:hover
+{
+	width: 166px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u131
+{
+	width: 166px;
+	min-height: 42px;
+	margin-right: -10000px;
+	left: 168px;
+}
+
+#u134
+{
+	width: 166px;
+	padding-bottom: 25px;
+}
+
+#u125.MuseMenuActive,#u134:hover
+{
+	width: 166px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u145
+{
+	width: 166px;
+	min-height: 42px;
+	margin-right: -10000px;
+	left: 336px;
+}
+
+#u146
+{
+	width: 166px;
+	padding-bottom: 25px;
+}
+
+#u134.MuseMenuActive,#u146:hover
+{
+	width: 166px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u146.MuseMenuActive
+{
+	width: 166px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u127-4_clip,#u135-4_clip,#u147-4_clip
+{
+	width: 166px;
+	height: 17px;
+}
+
+#u158
+{
+	width: 167px;
+	min-height: 42px;
+	margin-right: -10000px;
+	left: 504px;
+}
+
+#u161
+{
+	width: 167px;
+	padding-bottom: 25px;
+}
+
+#u161:hover
+{
+	width: 167px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u586
+{
+	width: 167px;
+	min-height: 42px;
+	margin-right: -10000px;
+	left: 673px;
+}
+
+#u589
+{
+	width: 167px;
+	padding-bottom: 25px;
+}
+
+#u161.MuseMenuActive,#u589:hover
+{
+	width: 167px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u589.MuseMenuActive
+{
+	width: 167px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u163-4_clip,#u591-4_clip
+{
+	width: 167px;
+	height: 17px;
+}
+
+#u127-4,#u135-4,#u147-4,#u163-4,#u591-4
+{
+	margin-right: -10000px;
+	top: 12px;
+}
+
+#u98
+{
+	z-index: 35;
+	width: 200px;
+	min-height: 100px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	margin-left: 210px;
+	margin-top: 60px;
+	position: relative;
+}
+
+#u639
+{
+	z-index: 44;
+	width: 500px;
+	background-color: transparent;
+	margin-left: 210px;
+	margin-top: 45px;
+	position: relative;
+}
+
+#pbuttonu604
+{
+	width: 0.01px;
+	margin-top: 44px;
+}
+
+#buttonu604
+{
+	z-index: 40;
+	width: 231px;
+	border-color: #787878;
+	background-color: #4EA0C9;
+	border-radius: 10px;
+	padding-bottom: 8px;
+	position: relative;
+	margin-right: -10000px;
+}
+
+#buttonu604:hover
+{
+	background-color: #930049;
+	width: 231px;
+	min-height: 0px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#buttonu604:active
+{
+	background-color: #76419C;
+	width: 231px;
+	min-height: 0px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u605
+{
+	z-index: 42;
+	height: 23px;
+	width: 119px;
+	vertical-align: top;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 8px;
+	left: 56px;
+	background: url("../images/u605.png") no-repeat 0px 0px;
+}
+
+#buttonu604:hover #u605
+{
+	background: url("../images/u605-r.png") no-repeat 0px 0px;
+}
+
+#buttonu574
+{
+	z-index: 36;
+	width: 231px;
+	border-color: #787878;
+	background-color: #4EA0C9;
+	border-radius: 10px;
+	padding-bottom: 8px;
+	position: relative;
+	margin-right: -10000px;
+	left: 690px;
+}
+
+#buttonu574:hover
+{
+	background-color: #930049;
+	width: 231px;
+	min-height: 0px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#buttonu604.ButtonSelected,#buttonu574:active
+{
+	background-color: #76419C;
+	width: 231px;
+	min-height: 0px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#buttonu574.ButtonSelected
+{
+	background-color: #76419C;
+	width: 231px;
+	min-height: 0px;
+	margin: 0px -10000px 0px 0px;
+}
+
+#u575
+{
+	z-index: 38;
+	height: 23px;
+	width: 119px;
+	vertical-align: top;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 8px;
+	left: 56px;
+	background: url("../images/u575.png") no-repeat 0px 0px;
+}
+
+#buttonu574:hover #u575
+{
+	background: url("../images/u575-r.png") no-repeat 0px 0px;
+}
+
+body
+{
+	position: relative;
+	min-width: 960px;
+	padding-top: 36px;
+	padding-bottom: 36px;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+}
+
