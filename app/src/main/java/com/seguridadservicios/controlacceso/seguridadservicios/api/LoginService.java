@@ -1,6 +1,7 @@
 package com.seguridadservicios.controlacceso.seguridadservicios.api;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.seguridadservicios.controlacceso.seguridadservicios.model.Usuario;
 
@@ -94,7 +95,7 @@ private ArrayList<Usuario> usuario;
                 error=e.getMessage();
                 e.printStackTrace();
             }
-            return null;
+            return jsonResult;
         }
 
         private StringBuilder inputStreamToString(InputStream is) {
@@ -117,7 +118,7 @@ private ArrayList<Usuario> usuario;
 
         @Override
         protected void onPostExecute(String result) {
-
+            Log.i("LoginServices", result);
         }
     }// end async task
 

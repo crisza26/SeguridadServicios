@@ -18,6 +18,7 @@ import butterknife.OnClick;
 
 public class PermissionsActivity extends Activity {
     Animation scalar;
+
     @InjectView(R.id.id_registrado)
     Button ivBtRegistrado;
     @InjectView(R.id.id_invitado)

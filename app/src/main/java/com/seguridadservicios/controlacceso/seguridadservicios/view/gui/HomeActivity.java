@@ -48,6 +48,12 @@ public class HomeActivity extends Activity {
         title.setTextColor(getResources().getColor(R.color.witheLetter));
         title.setGravity(Gravity.CENTER);
         // getActionBar().setCustomView(title);
+        ivBtPuertas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 
     @OnClick(R.id.id_puertas)
