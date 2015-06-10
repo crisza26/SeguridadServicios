@@ -33,7 +33,7 @@ public class LoginService {
     }
 
     private String jsonResult;
-    private String url = "http://sys.bugs3.com/sys/controller/login.php";
+    private String url = "http://sys.bugs3.com/server/sys/controller/login.php";
 
     public String getError() {
         return error;

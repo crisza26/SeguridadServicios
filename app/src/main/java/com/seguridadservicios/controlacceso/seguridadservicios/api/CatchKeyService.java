@@ -29,7 +29,7 @@ public class CatchKeyService {
         }
 
         private String jsonResult;
-        private String url = "http://sys.bugs3.com/sys/controller/TOTP.php";
+        private String url = "http://sys.bugs3.com/server/sys/controller/TOTP.php";
 
         public String getError() {
             return error;

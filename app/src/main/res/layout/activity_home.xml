@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,76 +8,101 @@
     android:weightSum="1">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="379dp"
         android:orientation="vertical"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:layout_weight="0.45">
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout2">
 
+        <include layout="@layout/menu_inferior"
 
-        <Button
-            android:id="@+id/id_puertas"
-            android:background="@layout/buttonshape"
-            android:shadowRadius="5"
-            android:layout_width="193dp"
-            android:text="@string/LBL_BT_PUERTAS"
-
-            android:layout_height="36dp"
-            android:layout_marginLeft="90sp"
-            android:layout_marginRight="90sp"
-            android:onClick="puertas"
-            android:layout_marginTop="5sp"
-            android:textColor="@color/witheLetter"
-            android:gravity="center" />
-
-        <Button
-            android:id="@+id/id_permisos"
-            android:background="@layout/buttonshape"
-            android:shadowRadius="5"
-            android:layout_width="193dp"
-            android:text="@string/LBL_BT_PERMISOS"
-            android:onClick="permisos"
-            android:layout_height="36dp"
-            android:layout_marginLeft="90sp"
-            android:layout_marginRight="90sp"
-            android:layout_marginTop="50dp"
-            android:textColor="@color/witheLetter"
-            android:gravity="center" />
-
-        <Button
-            android:id="@+id/id_bpanico"
-            android:background="@layout/buttonshape"
-            android:shadowRadius="5"
-            android:onClick="panico"
-            android:layout_width="193dp"
-            android:text="@string/LBL_BT_BPANICO"
-            android:layout_height="36dp"
-            android:layout_marginLeft="90sp"
-            android:layout_marginRight="90sp"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="60dp"
-            android:textColor="@color/witheLetter"
-            android:gravity="center" />
-
-        <Button
-            android:id="@+id/id_bgenerarclave"
-            android:background="@layout/buttonshape"
-            android:shadowRadius="5"
-            android:onClick="generarclave"
-            android:layout_width="193dp"
-            android:text="@string/LBL_BT_GENCLA"
-            android:layout_height="36dp"
-            android:layout_marginLeft="90sp"
-            android:layout_marginRight="90sp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="80dp"
-            android:textColor="@color/witheLetter"
-            android:gravity="center" />
-
+            android:id="@+id/include"
+            android:layout_gravity="bottom"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"></include>
     </LinearLayout>
 
-    <include layout="@layout/menu_inferior"
-        android:layout_weight="0.35"></include>
-</LinearLayout>
+    <Button
+        android:id="@+id/id_puertas"
+        android:background="@layout/buttonshape"
+        android:shadowRadius="5"
+        android:text="@string/LBL_BT_PUERTAS"
+
+        android:onClick="Irpuertas"
+        android:textColor="@color/witheLetter"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:id="@+id/id_permisos"
+        android:background="@layout/buttonshape"
+        android:shadowRadius="5"
+        android:text="@string/LBL_BT_PERMISOS"
+        android:onClick="permisos"
+        android:textColor="@color/witheLetter"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/id_puertas"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:id="@+id/id_bpanico"
+        android:background="@layout/buttonshape"
+        android:shadowRadius="5"
+        android:onClick="panico"
+
+        android:text="@string/LBL_BT_BPANICO"
+        android:textColor="@color/witheLetter"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/id_permisos"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@+id/id_permisos"
+        android:layout_alignStart="@+id/id_permisos" />
+
+    <TextView
+
+        android:id="@+id/imprimeclave"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_below="@+id/id_bgenerarclave"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp" />
+
+    <Button
+        android:id="@+id/id_bgenerarclave"
+        android:background="@layout/buttonshape"
+        android:shadowRadius="5"
+        android:onClick="generarclave"
+        android:text="@string/LBL_BT_GENCLA"
+        android:textColor="@color/witheLetter"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/id_bpanico"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignLeft="@+id/id_bpanico"
+        android:layout_alignStart="@+id/id_bpanico" />
+
+</RelativeLayout>
 

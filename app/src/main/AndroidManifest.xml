@@ -87,7 +87,6 @@
         <activity
             android:name=".view.gui.HistoryDoorAccessActivity"
             android:label="@string/title_activity_history_door_access" >
-
         </activity>
         <activity
             android:name=".view.gui.RegisteredActivity"
@@ -100,6 +99,18 @@
         <activity
             android:name=".view.gui.ServiceTestActivity"
             android:label="@string/title_activity_service_test" >
+        </activity>
+        <activity
+            android:name=".puertas"
+            android:label="@string/title_activity_puertas" >
+        </activity>
+        <activity
+            android:name=".view.gui.puertas"
+            android:label="@string/title_activity_puertas" >
+        </activity>
+        <activity
+            android:name=".MisPuertasActivity"
+            android:label="@string/title_activity_mis_puertas" >
         </activity>
     </application>
 

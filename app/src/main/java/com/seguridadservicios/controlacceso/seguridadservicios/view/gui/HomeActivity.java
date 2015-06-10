@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.seguridadservicios.controlacceso.seguridadservicios.MisPuertasActivity;
 import com.seguridadservicios.controlacceso.seguridadservicios.R;
 import com.seguridadservicios.controlacceso.seguridadservicios.api.CatchKeyService;
 
@@ -57,10 +58,10 @@ public class HomeActivity extends Activity {
     }
 
     @OnClick(R.id.id_puertas)
-    public void puertas(View view) {
+    public void Irpuertas(View view) {
         view.startAnimation(scalar);
-        Intent inetPuertas = new Intent(HomeActivity.this, DoorActivity.class);
-        startActivity(inetPuertas);
+        Intent inetPermisos = new Intent(HomeActivity.this, PermissionsActivity.class);
+        startActivity(inetPermisos);
     }
 
     @OnClick(R.id.id_permisos)
@@ -80,10 +81,9 @@ public class HomeActivity extends Activity {
         view.startAnimation(scalar);
         CatchKeyService cks = new CatchKeyService();
         cks.accessWebService();
+TextView clave =(TextView) findViewById(R.id.imprimeclave);
+        clave.setText(SinPublicidad(cks.getJsonResult()));
 
-
-        Toast.makeText(getApplicationContext(),
-               SinPublicidad(cks.getJsonResult()), Toast.LENGTH_SHORT).show();
     }
 
 

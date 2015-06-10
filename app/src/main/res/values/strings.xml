@@ -93,5 +93,6 @@
     <string name="title_activity_pesonal_data">PesonalDataActivity</string>
     <string name="title_activity_key_generate">keyGenerate</string>
     <string name="title_activity_service_test">ServiceTest</string>
+    <string name="title_activity_mis_puertas">MisPuertasActivity</string>
 
 </resources>

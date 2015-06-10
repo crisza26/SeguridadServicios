@@ -83,7 +83,7 @@ public class LoginActivity extends Activity {
         }else{
 
             Toast.makeText(getApplicationContext(),
-                    "error en usuario o contraseña!", Toast.LENGTH_SHORT).show();
+                    ls.getJsonResult()/**"error en usuario o contraseña!"**/, Toast.LENGTH_SHORT).show();
 
         }
     }
