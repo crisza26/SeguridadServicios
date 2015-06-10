@@ -12,7 +12,7 @@
 #page
 {
 	z-index: 1;
-	width: 960px;
+	min-width: 960px;
 	min-height: 135px;
 	background-image: none;
 	border-style: none;
@@ -44,7 +44,7 @@
 #menuu123
 {
 	z-index: 2;
-	width: 840px;
+	width: 0px;
 }
 
 #u124

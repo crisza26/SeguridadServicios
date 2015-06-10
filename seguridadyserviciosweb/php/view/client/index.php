@@ -31,27 +31,28 @@
     </div>
     <nav class="MenuBar clearfix grpelem" id="menuu123"><!-- horizontal box -->
      <div class="MenuItemContainer clearfix grpelem" id="u131"><!-- vertical box -->
-      <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u134" href="puertas.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u135-4"><!-- rasterized frame --><div id="u135-4_clip"><img id="u135-4_img" alt="Puertas" width="166" height="17" src="images/u135-4.png"/></div></div></a>
+      <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u134" href="index.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u135-4"><!-- rasterized frame --><div id="u135-4_clip"><img id="u135-4_img" alt="Puertas" width="166" height="17" src="images/u135-4.png"/></div></div></a>
      </div>
      <div class="MenuItemContainer clearfix grpelem" id="u145"><!-- vertical box -->
-      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u146" href="usuarios-y-permisos.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u147-4"><!-- rasterized frame --><div id="u147-4_clip"><img id="u147-4_img" alt="Usuarios y Permisos" width="166" height="17" src="images/u147-4.png"/></div></div></a>
+      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u146" href="usuarios-y-permisos.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u147-4"><!-- rasterized frame --><div id="u147-4_clip"><img id="u147-4_img" alt="Usuarios y Permisos" width="166" height="17" src="images/u147-4.png"/></div></div></a>
      </div>
      <div class="MenuItemContainer clearfix grpelem" id="u158"><!-- vertical box -->
-      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u161" href="registros.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u163-4"><!-- rasterized frame --><div id="u163-4_clip"><img id="u163-4_img" alt="Registros" width="167" height="17" src="images/u163-4.png"/></div></div></a>
+      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u161" href="registros.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u163-4"><!-- rasterized frame --><div id="u163-4_clip"><img id="u163-4_img" alt="Registros" width="167" height="17" src="images/u163-4.png"/></div></div></a>
      </div>
      <div class="MenuItemContainer clearfix grpelem" id="u586"><!-- vertical box -->
-      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u589" href="logs.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u591-4"><!-- rasterized frame --><div id="u591-4_clip"><img id="u591-4_img" alt="Logs" width="167" height="17" src="images/u591-4.png"/></div></div></a>
+      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u589" href="logs.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u591-4"><!-- rasterized frame --><div id="u591-4_clip"><img id="u591-4_img" alt="Logs" width="167" height="17" src="images/u591-4.png"/></div></div></a>
      </div>
     </nav>
    </div>
    <ul class="AccordionWidget clearfix colelem" id="accordionu165"><!-- vertical box -->
     <li class="AccordionPanel clearfix colelem" id="u174"><!-- vertical box -->
       <div class="position_content" id="u174_position_content">
+        <div id="error"></div>
         <img class="AccordionPanelTab colelem" id="u175" alt="Puerta Principal" src="images/blank.gif"/>
         <!-- state-based BG images -->
         <div class="AccordionPanelContent clearfix colelem" id="u176"><!-- group -->
           <div class="clearfix grpelem" id="pbuttonu430"><!-- column -->
-            <div class="Button rounded-corners clearfix colelem" id="buttonu430" onclick="getTOTP();"
+            <div class="Button rounded-corners clearfix colelem" id="buttonu430"
             ><!-- container box --><img class="grpelem" id="u431" alt="Generar clave" src="images/blank.gif"/>
 
             
@@ -109,23 +110,29 @@
   <script src="scripts/webpro.js?220831917" type="text/javascript"></script>
   <script src="scripts/musewpdisclosure.js?4110183178" type="text/javascript"></script>
   <script src="scripts/jquery.watch.js?56779320" type="text/javascript"></script>
+
+
+  <script>
+  //alert($('#user').val());
+$(document).ready(function(){
+    $("#buttonu430").click(function(){
+        $.post( "../../controller/controller.php", { servicio:"getTOTP",puerta: "0"})
+      .done(function( data) {
+        obj=jQuery.parseJSON(data);
+        if(obj.error){
+          $("#error").html(obj.error);
+        }
+        else{
+          document.getElementById("buttonu427").innerHTML = obj.code;
+        }
+    });
+    });
+});
+</script>
+
             
   <!-- Other scripts -->
   <script type="text/javascript">
-function getTOTP(){
-  $.ajax({
-    url: "../TOTP.php",
-    context: document.body
-    }).done(function(data){
-      document.getElementById("buttonu427").innerHTML = data;
-
-      //$("#buttonu427").html = data;
-      
-    });
-  //alert("hola");
-  //$("#buttonu427").value("sisas");
-}
-
    $(document).ready(function() { 
 
 

@@ -2,7 +2,7 @@
 session_start();
 $_SESSION['timeout']=time();
 
-include '../getconexion.php';
+
 
 ?>
 
@@ -13,6 +13,9 @@ include '../getconexion.php';
   <script type="text/javascript">
    if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required":["jquery-1.8.3.min.js", "museutils.js", "jquery.musemenu.js", "jquery.watch.js", "logs.css"], "outOfDate":[]};
 </script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
   
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
   <meta name="generator" content="2014.3.2.295"/>
@@ -21,6 +24,23 @@ include '../getconexion.php';
   <link rel="stylesheet" type="text/css" href="css/site_global.css?422415861"/>
   <link rel="stylesheet" type="text/css" href="css/master_a-p_g_-maestra.css?419190160"/>
   <link rel="stylesheet" type="text/css" href="css/logs.css?322602332" id="pagesheet"/>
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   <!-- Other scripts -->
   <script type="text/javascript">
    document.documentElement.className += ' js';
@@ -37,79 +57,67 @@ include '../getconexion.php';
     <img class="block" id="u631_img" src="images/logpag.gif" alt="" width="69" height="82"/>
    </div>
    <div class="clearfix grpelem" id="pmenuu123"><!-- column -->
-    <nav class="MenuBar clearfix colelem" id="menuu123"><!-- horizontal box -->
-     
+    <nav class="MenuBar clearfix grpelem" id="menuu123"><!-- horizontal box -->
      <div class="MenuItemContainer clearfix grpelem" id="u131"><!-- vertical box -->
-      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u134" href="index.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u135-4"><!-- rasterized frame --><div id="u135-4_clip"><img id="u135-4_img" alt="Puertas" width="166" height="17" src="images/u135-4.png"/></div></div></a>
+      <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u134" href="index.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u135-4"><!-- rasterized frame --><div id="u135-4_clip"><img id="u135-4_img" alt="Puertas" width="166" height="17" src="images/u135-4.png"/></div></div></a>
      </div>
      <div class="MenuItemContainer clearfix grpelem" id="u145"><!-- vertical box -->
-      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u146" href="usuarios-y-permisos.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u147-4"><!-- rasterized frame --><div id="u147-4_clip"><img id="u147-4_img" alt="Usuarios y Permisos" width="166" height="17" src="images/u147-4.png"/></div></div></a>
+      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u146" href="usuarios-y-permisos.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u147-4"><!-- rasterized frame --><div id="u147-4_clip"><img id="u147-4_img" alt="Usuarios y Permisos" width="166" height="17" src="images/u147-4.png"/></div></div></a>
      </div>
      <div class="MenuItemContainer clearfix grpelem" id="u158"><!-- vertical box -->
-      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u161" href="registros.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u163-4"><!-- rasterized frame --><div id="u163-4_clip"><img id="u163-4_img" alt="Registros" width="167" height="17" src="images/u163-4.png"/></div></div></a>
+      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u161" href="registros.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u163-4"><!-- rasterized frame --><div id="u163-4_clip"><img id="u163-4_img" alt="Registros" width="167" height="17" src="images/u163-4.png"/></div></div></a>
      </div>
      <div class="MenuItemContainer clearfix grpelem" id="u586"><!-- vertical box -->
-      <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u589" href="logs.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u591-4"><!-- rasterized frame --><div id="u591-4_clip"><img id="u591-4_img" alt="Logs" width="167" height="17" src="images/u591-4.png"/></div></div></a>
+      <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u589" href="logs.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u591-4"><!-- rasterized frame --><div id="u591-4_clip"><img id="u591-4_img" alt="Logs" width="167" height="17" src="images/u591-4.png"/></div></div></a>
      </div>
     </nav>
-    <div class="clearfix colelem" id="pu593-4"><!-- group -->
-     <div class="clearfix grpelem" id="u593-4"><!-- content -->
-      <p>Desde:</p>
-     </div>
-     <div class="Button rounded-corners clearfix grpelem" id="buttonu595"><!-- container box -->
-      <div class="clearfix grpelem" id="u597-4"><!-- content -->
-       <p>Febrero</p>
-      </div>
-     </div>
-     <div class="Button rounded-corners clearfix grpelem" id="buttonu598"><!-- container box -->
-      <div class="clearfix grpelem" id="u599-4"><!-- content -->
-       <p>10</p>
-      </div>
-     </div>
-     <div class="clearfix grpelem" id="u594-4"><!-- content -->
-      <p>Hasta:</p>
-     </div>
-     <div class="Button rounded-corners clearfix grpelem" id="buttonu600"><!-- container box -->
-      <div class="clearfix grpelem" id="u601-4"><!-- content -->
-       <p>Febrero</p>
-      </div>
-     </div>
-     <div class="Button rounded-corners clearfix grpelem" id="buttonu602"><!-- container box -->
-      <div class="clearfix grpelem" id="u603-4"><!-- content -->
-       <p>28</p>
-      </div>
-     </div>
-    </div>
-   </div>
-   <div class="verticalspacer"></div>
-  </div>
 
 
-<?php
-$id_usuario = $_SESSION['id'];
- //$sql = "select * from tbl_usuario where usuario='$correo'";
- $sql = "select * from tbl_logs where id_usuario = '$id_usuario' ";
-
-  /* Consultas de selección que devuelven un conjunto de resultados */
- if ($resultado = $mysqli->query($sql)) {
-
-    if ($resultado->num_rows > 0) {
-    // output data of each row
-      echo "<table>";
-
-      while($row = $resultado->fetch_assoc()) {
-        echo "<tr><td>";
-        echo " ip: " . $row["ip"]. " fecha " . $row["fecha"]." puerta " . $row["id_puerta"];
-        echo "</td></tr>";
+</div>
 
 
-      }
-      echo "</table>";
-    } else {
-      echo "0 results";
-    }
-  }
-?>
+    
+
+      <div id="info" style="margin-top: 100px;">
+
+      </div>  
+
+      <script>
+$(document).ready(function(){
+    //$("#ingresar").click(function(){
+        $.post( "../../controller/controller.php", { servicio:"logs"})
+      .done(function( data) {
+        var obj=jQuery.parseJSON(data);
+       // if(obj.error){
+          //$("#error").html(obj);
+          var msgForIn = '';
+          msgForIn='<table class="table table-bordered">';
+          msgForIn+='<thead><tr><th>usuario</th><th>ip</th><th>fecha</th><th>puerta</th></tr></thead><tbody>';
+          for (var i=0; i<obj.length; i++){
+             msgForIn += '<tr><th scope="row">'+obj[i].usuario+'</th><td>'+obj[i].ip+'</td><td>'+obj[i].fecha+'</td><td>'+obj[i].puerta+"</td></tr>";
+          }
+           msgForIn+='</tbody></table>';
+          $("#info").html(msgForIn);
+          //alert(msgForIn);
+          /*for(var key in obj){
+            msgForIn += key.ip+":";
+          }
+          $("#error").html(msgForIn);
+          */
+        //}
+        //else{
+          //alert(obj.location)
+          //window.location.assign(obj.location);
+        //}
+    });
+  //  });
+});
+</script>
+   
+</div>
+
+
+
 
 
 

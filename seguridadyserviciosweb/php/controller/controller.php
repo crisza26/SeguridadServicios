@@ -9,10 +9,15 @@ class controller{
     function __construct() {
 
       $servicio = $_POST['servicio'];
-      $user=$_POST['user'];
-      $password = $_POST['password'];
+            
+          //$servicio = "logs";
 
+          //prueba getTOTP
+        //$servicio="getTOTP";
+            
        if("login"==$servicio){
+              $user=$_POST['user'];
+             $password = $_POST['password'];
 
             include '../model/api.php';
             //echo "string";
@@ -28,8 +33,47 @@ class controller{
             }
        }
        if("logs"==$servicio){
-            
+          include '../model/api.php';
+           $valid= $api->logs("","");
+           // echo json_encode($valid);
+          echo($valid);
+               
+       }
+
+       if("getTOTP"==$servicio){
+
+           //manejo de sesiones
+            session_start();
+
+        include '../model/api.php';
+
+        $id_user="0";
+        $id_puerta="0";
+
+            if(isset($_SESSION['id'])){
+                $GLOBALS['id_user']=$_SESSION['id'];    
+            }
+
+            $valid= $api->getTOTP($id_puerta,$id_user);
+           if($valid==FALSE){
+              $arr = array('error' =>"hubo un error obteniendo codigo");
+              echo json_encode($arr);
+           }
+           else{
+            $arr = array('code' =>$valid);
+              echo json_encode($arr);
+           }
+
+       }
+
+       if("session-close"==$servicio){
+           $valid= $api->closeSession();
+           if($valid==TRUE){
+                $arr = array('location' =>'../../index.html');
+                echo json_encode($arr);
+           }
        }
    }
 }
 $controller = new controller();
+
